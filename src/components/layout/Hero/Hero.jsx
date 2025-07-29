@@ -1,52 +1,65 @@
+import useModalStore from '../../../store/modalStore';
 import Container from '../../ui/Container/Container';
 import s from './Hero.module.scss';
 
 const Hero = () => {
-    return (
-        <>
-            <section className={s.hero}>
-                <Container>
-                    <div className={s.wrapper}>
-                        <div className={s.box}>
-                            <h1>Уникальность скреперов нашего
-                                производства в том, что в их конструкции
-                                мы используем элементы из износостойкой
-                                марки стали импортного производства
-                            </h1>
+  const { openModal } = useModalStore();
+  return (
+    <>
+      <section className={s.hero}>
+        <Container>
+          <div className={s.wrapper}>
+            <div className={s.box}>
+              <h1>
+                Уникальность скреперов нашего производства в том, что в их
+                конструкции мы используем элементы из износостойкой марки стали
+                импортного производства
+              </h1>
 
-                            <p>Дополнительно производим запасные части</p>
+              <p>Дополнительно производим запасные части</p>
 
-                            <button>Оставить заявку</button>
-                        </div>
+              <button onClick={openModal}>Оставить заявку</button>
+            </div>
 
-                        <img className={s.image} src="/img/hero-img-11.png" alt="img" />
-                    </div>
+            <img className={s.image} src="/img/hero-img-11.png" alt="img" />
+          </div>
 
-                    <div className={s.inner}>
-                        <div className={s.inner_box}>
-                            <img src="/img/hero-inner-1.svg" alt="icon" />
-                            <p>Бесплатная доставка до ТК</p>
-                        </div>
+          <div className={s.inner}>
+            <div className={s.inner_box}>
+              <img src="/img/hero-inner-1.svg" alt="icon" />
+              <p>Бесплатная доставка до ТК</p>
+            </div>
 
-                        <div className={s.inner_box}>
-                            <img src="/img/hero-inner-2.svg" alt="icon" />
-                            <p>Собственное производство</p>
-                        </div>
+            <div className={s.inner_box}>
+              <img src="/img/hero-inner-2.svg" alt="icon" />
+              <p>Собственное производство</p>
+            </div>
 
-                        <div className={s.inner_btn}>
-                            <img className={s.icon_pc} src="/img/hero-inner-3.svg" alt="icon" />
+            <div className={s.inner_btn}>
+              <img
+                className={s.icon_pc}
+                src="/img/hero-inner-3.svg"
+                alt="icon"
+              />
+              <a href="#equipment" className={s.btnLink}>
+                <img
+                  src="/img/hero-inner-3.svg"
+                  alt="icon"
+                  className={s.icon}
+                />
+                Запчасти
+                <img
+                  src="/img/hero-inner-arrow.svg"
+                  alt="arrow"
+                  className={s.arrow}
+                />
+              </a>
+            </div>
+          </div>
+        </Container>
+      </section>
+    </>
+  );
+};
 
-                            <button>
-                                <img src="/img/hero-inner-3.svg" alt="icon" className={s.icon} />
-                                Запчасти
-                                <img src="/img/hero-inner-arrow.svg" alt="arrow" className={s.arrow} />
-                            </button>
-                        </div>
-                    </div>
-                </Container>
-            </section>
-        </>
-    )
-}
-
-export default Hero
+export default Hero;
