@@ -3,7 +3,6 @@ import Container from '../../ui/Container/Container';
 import s from './FreeWrap.module.scss';
 import useModalStore from '../../../store/modalStore';
 
-
 const FreeWrap = () => {
   const { openModal } = useModalStore();
   const [timeLeft, setTimeLeft] = useState(12 * 60 + 20);
@@ -49,13 +48,13 @@ const FreeWrap = () => {
                 </div>
 
                 <p>
-                  Есть идея, но не знаете, с чего начать? Бесплатная
-                  консультация специалиста — в подарок
+                  Есть идея, но не знаете, с чего начать?
+                  <br /> Бесплатная консультация специалиста — в подарок
                 </p>
               </div>
 
               <div className={s.btns}>
-                <button>Получить консультацию</button>
+                <button onClick={openModal}>Получить консультацию</button>
                 <button onClick={openModal}>Заказать звонок</button>
               </div>
             </div>

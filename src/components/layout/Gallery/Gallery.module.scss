@@ -52,16 +52,36 @@
 
 .slider_container {
   display: flex;
-
   overflow-x: auto;
-  scroll-snap-type: none;
   scroll-behavior: smooth;
   gap: 20px;
-
+  padding-bottom: 40px;
   &::-webkit-scrollbar {
-    display: none;
-  }
+    width: 100%;
+    appearance: none;
+    height: 4px;
+    background-color: white;
 
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+  }
+  &::-webkit-scrollbar-thumb {
+    appearance: none;
+    width: 50%;
+    height: 4px;
+    background-color: var(--accent-color, #007f4f);
+    border-radius: 80px;
+    border: none;
+    transition: background 0.3s;
+  }
+  // &:not(:has(img:nth-child(n + 6))) {
+  //   &::-webkit-scrollbar,
+  //   &::-webkit-scrollbar-track,
+  //   &::-webkit-scrollbar-thumb {
+  //     display: none;
+  //   }
+  // }
   img {
     flex: 0 0 calc((97% - 40px) / 5);
     min-height: 281px;
@@ -84,7 +104,8 @@
   border-radius: 2px;
   outline: none;
   cursor: pointer;
-
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color, #007f4f) white;
   &::-webkit-slider-thumb {
     appearance: none;
     width: 50%;
@@ -121,7 +142,7 @@
   flex-wrap: wrap;
   gap: 40px;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 80px;
   h5 {
     color: white;
     font-size: 32px;
@@ -171,10 +192,8 @@
     font-weight: 400;
     font-size: 12px;
   }
-  p span {
-    text-decoration: underline;
-    line-height: 167%;
-    text-decoration-skip-ink: none;
+  p a {
+    color: white;
   }
   @media (max-width: 998px) {
     width: 100%;

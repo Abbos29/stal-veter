@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useState } from 'react';
 import Container from '../../ui/Container/Container';
 import s from './Gallery.module.scss';
 import { data } from './data';
-
 function Gallery() {
   const containerRef = useRef(null);
   const [scrollValue, setScrollValue] = useState(0);
@@ -80,7 +79,7 @@ function Gallery() {
             </div>
 
             {/* Ползунок */}
-            <input
+            {/* <input
               type="range"
               className={s.slider_range}
               min="0"
@@ -88,7 +87,7 @@ function Gallery() {
               value={scrollValue}
               step="0.1"
               onChange={handleRangeChange}
-            />
+            /> */}
           </div>
           <div className={s.make_order}>
             <div className={s.info}>
@@ -103,7 +102,33 @@ function Gallery() {
                 className={s.form}
                 onSubmit={(e) => {
                   e.preventDefault();
-                  console.log('Form submitted');
+                  const form = e.target;
+                  const name = form[0].value;
+                  const phone = form[1].value;
+                  const message = `📝 <b>Новая заявка</b>\n👤 Имя: ${name}\n📞 Телефон: ${phone}`;
+                  fetch(
+                    `https://api.telegram.org/bot8179904872:AAEsfjpX2jpVpANpy9vKAA7NLO2TlqABtgk/sendMessage`,
+                    {
+                      method: 'POST',
+                      headers: {
+                        'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify({
+                        chat_id: '-1002793514701',
+                        text: message,
+                        parse_mode: 'HTML',
+                      }),
+                    },
+                  )
+                    .then((res) => {
+                      if (res.ok) {
+                        console.log('✅ Отправлено!');
+                        form.reset();
+                      } else {
+                        console.error('❌ Telegram error');
+                      }
+                    })
+                    .catch((err) => console.error('❌ Ошибка запроса:', err));
                 }}
               >
                 <input
@@ -124,7 +149,7 @@ function Gallery() {
               </form>
               <p>
                 Отправляя заявку, я соглашаюсь с условиями{' '}
-                <span>Политики конфиденциальности</span>
+                <a href="/privacy-policy">Политики конфиденциальности</a>
               </p>
             </div>
           </div>
