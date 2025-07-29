@@ -1,4 +1,3 @@
-import React from 'react';
 import s from './Footer.module.scss';
 import Container from '../../ui/Container/Container';
 import useModalStore from '../../../store/modalStore';
