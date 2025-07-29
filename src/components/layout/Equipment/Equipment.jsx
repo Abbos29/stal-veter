@@ -7,33 +7,11 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { useState } from 'react';
-
-const data = [
-  {
-    img: '/img/gallery_img1.png',
-    title: 'Скреперная навозоуборочная установка',
-  },
-  {
-    img: '/img/gallery_img2.png',
-    title: 'Скреперная навозоуборочная установка',
-  },
-  {
-    img: '/img/gallery_img3.png',
-    title: 'Скреперная навозоуборочная установка',
-  },
-  {
-    img: '/img/gallery_img4.png',
-    title: 'Скреперная навозоуборочная установка',
-  },
-  {
-    img: '/img/gallery_img5.png',
-    title: 'Скреперная навозоуборочная установка',
-  },
-];
-
+import { data } from './data';
 function Equipment() {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
+
   return (
     <section className={s.equipment} id="equipment">
       <Container>
@@ -77,20 +55,19 @@ function Equipment() {
                 <div className={s.card}>
                   <img src={item.img} alt="" />
                   <h6>{item.title}</h6>
-                  <p>
-                    А также базовые сценарии поведения пользователей указаны как
-                    претенденты на роль ключевых.
-                  </p>
+                  <p>{item.text}</p>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
+
           <div className={s.nav}>
             <div className={`${s.prev} ${isBeginning ? s.disabled : ''}`}>
               ←
             </div>
             <div className={`${s.next} ${isEnd ? s.disabled : ''}`}>→</div>
           </div>
+
           <div className={s.info}>
             <div className={s.info_text}>
               <p>

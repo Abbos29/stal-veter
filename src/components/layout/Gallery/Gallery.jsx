@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Container from '../../ui/Container/Container';
 import s from './Gallery.module.scss';
+import { data } from './data';
 
 function Gallery() {
   const containerRef = useRef(null);
@@ -73,11 +74,9 @@ function Gallery() {
 
           <div className={s.slider}>
             <div className={s.slider_container} ref={containerRef}>
-              <img src="/img/gallery_img5.png" alt="Gallery Image 1" />
-              <img src="/img/gallery_img1.png" alt="Gallery Image 2" />
-              <img src="/img/gallery_img2.png" alt="Gallery Image 3" />
-              <img src="/img/gallery_img3.png" alt="Gallery Image 4" />
-              <img src="/img/gallery_img4.png" alt="Gallery Image 5" />
+              {data.map((link, index) => (
+                <img src={link} alt={'Gallery Image ' + (index + 1)} />
+              ))}
             </div>
 
             {/* Ползунок */}
