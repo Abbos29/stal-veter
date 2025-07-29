@@ -3,6 +3,7 @@ import Container from '../../ui/Container/Container';
 import s from './FreeWrap.module.scss';
 import useModalStore from '../../../store/modalStore';
 
+
 const FreeWrap = () => {
   const { openModal } = useModalStore();
   const [timeLeft, setTimeLeft] = useState(12 * 60 + 20);

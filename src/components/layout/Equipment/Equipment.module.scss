@@ -102,12 +102,12 @@
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
+  gap: 42px;
   @media (max-width: 998px) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  gap: 42px;
 }
 .info_text {
   width: 50%;
