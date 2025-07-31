@@ -10,7 +10,7 @@ function Footer() {
     <footer className={s.footer}>
       <Container>
         <div className={s.top}>
-          <a href="#header" className={s.logo}>
+          <a href="#" className={s.logo}>
             <img src="/img/logo-footer.svg" alt="logo" />
           </a>
           <div className={s.top_item}>
@@ -45,7 +45,7 @@ function Footer() {
         </div>
         <div className={s.bottom}>
           <p>© Стальной ветер 2025</p>
-          <a href="#">Политика конфиденциальности</a>
+          <a href="/privacy-policy">Политика конфиденциальности</a>
         </div>
       </Container>
     </footer>

@@ -29,9 +29,9 @@ const Header = () => {
 
             <div className={s.menu}>
               <a href="tel:+79995301639">+7 (999) 530-16-39</a>
-
               <button onClick={openModal}>Заказать звонок</button>
             </div>
+
           </nav>
         </Container>
       </header>

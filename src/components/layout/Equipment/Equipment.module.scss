@@ -80,7 +80,9 @@
   font-size: 20px;
   cursor: pointer;
   color: var(--accent-color);
-  transition: opacity 0.2s, scale 0.2s;
+  transition:
+    opacity 0.2s,
+    scale 0.2s;
   &:hover {
     scale: 1.01;
   }
@@ -133,22 +135,22 @@
   border-radius: 40px;
   height: max-content;
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -35px;
     left: 0%;
-    background-image: url('/img/gear.svg');
+    background-image: url("/img/gear.svg");
     background-size: 132px 132px;
     min-width: 132px;
     min-height: 132px;
   }
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 20%;
     right: -10px;
     transform: rotate(90deg);
-    background-image: url('/img/gear.svg');
+    background-image: url("/img/gear.svg");
     background-size: 132px 132px;
     min-width: 132px;
     min-height: 132px;
@@ -247,7 +249,9 @@
   cursor: pointer;
   border: 1px solid white;
 
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 
   &:hover {
     background-color: transparent;

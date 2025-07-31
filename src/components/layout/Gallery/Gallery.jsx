@@ -40,7 +40,7 @@ function Gallery() {
     <section className={s.gallery}>
       <Container>
         <div className={s.wrapper}>
-          <h5>Галерея</h5>
+          {/* <h5>Галерея</h5> */}
           <div className={s.about}>
             <img src="/img/gallery_about.png" alt="about" />
             <div className={s.about_inner}>
@@ -70,7 +70,9 @@ function Gallery() {
           <div className={s.slider}>
             <div className={s.slider_container} ref={containerRef}>
               {data.map((link, index) => (
-                <img src={link} alt={'Gallery Image ' + (index + 1)} />
+                <>
+                  <img src={link} alt={'Gallery Image ' + (index + 1)} />
+                </>
               ))}
             </div>
 
@@ -136,11 +138,10 @@ function Gallery() {
                   type="text"
                   placeholder="Ваше имя"
                   className={s.input}
-                  required
                 />
                 <input
                   type="tel"
-                  placeholder="Ваш телефон"
+                  placeholder="Ваш телефон*"
                   className={s.input}
                   required
                 />

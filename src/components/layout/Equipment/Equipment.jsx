@@ -140,11 +140,10 @@ function Equipment() {
                   type="text"
                   placeholder="Ваше имя"
                   className={s.input}
-                  required
                 />
                 <input
                   type="tel"
-                  placeholder="Ваш телефон"
+                  placeholder="Ваш телефон*"
                   className={s.input}
                   required
                 />

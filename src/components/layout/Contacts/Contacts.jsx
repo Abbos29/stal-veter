@@ -14,14 +14,14 @@ function Contacts() {
               <img src="/img/phone.svg" alt="phone" />
             </div>
             <h6>Телефон</h6>
-            <p>+7 (999) 530-16-39</p>
+            <a href="tel:+79995301639">+7 (999) 530-16-39</a>
           </div>
           <div className={s.list_item}>
             <div className={s.item_icon}>
               <img src="/img/email.svg" alt="email" />
             </div>
             <h6>E-mail</h6>
-            <p>info-sv48@yandex.ru</p>
+            <a href="mailto:info-sv48@yandex.ru">info-sv48@yandex.ru</a>
           </div>
           <div className={s.list_item}>
             <div className={s.item_icon}>
