@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { useState } from 'react';
 import { data } from './data';
+import toast from 'react-hot-toast';
 function Equipment() {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
@@ -122,12 +123,17 @@ function Equipment() {
                     .then((res) => {
                       if (res.ok) {
                         console.log('✅ Отправлено!');
+                        toast.success('Заявка отправлена!');
                         form.reset();
                       } else {
+                        toast.error('Что то пошло не так. Попробуйте позже!');
                         console.error('❌ Telegram error');
                       }
                     })
-                    .catch((err) => console.error('❌ Ошибка запроса:', err));
+                    .catch((err) => {
+                      toast.error('Что то пошло не так. Попробуйте позже!');
+                      console.error('❌ Ошибка запроса:', err);
+                    });
                 }}
               >
                 <input

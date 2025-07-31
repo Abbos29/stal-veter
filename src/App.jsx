@@ -1,30 +1,20 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import PrivacyPolicy from './pages/Policy/Policy';
 import './reset.css';
 import './App.css';
-import '/public/fonts/stylesheet.css';
-import Header from './components/layout/Header/Header';
-import Hero from './components/layout/Hero/Hero';
-import Types from './components/layout/Types/Types';
-import FreeWrap from './components/layout/FreeWrap/FreeWrap';
-import Gallery from './components/layout/Gallery/Gallery';
-import Equipment from './components/layout/Equipment/Equipment';
-import Contacts from './components/layout/Contacts/Contacts';
-import Footer from './components/layout/Footer/Footer';
-import CallModal from './components/layout/CallModal/CallModal';
-import useModalStore from './store/modalStore';
-
+import { Toaster } from 'react-hot-toast';
+import NotFound from './pages/NotFound/NotFound';
 const App = () => {
   return (
-    <>
-      <CallModal />
-      <Header />
-      <Hero />
-      <Types />
-      <FreeWrap />
-      <Gallery />
-      <Equipment />
-      <Contacts />
-      <Footer />
-    </>
+    <Router>
+      <Toaster position="right-top" />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 };
 

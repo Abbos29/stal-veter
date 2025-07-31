@@ -1,87 +1,84 @@
 .wrapper {
-    display: grid;
+  display: grid;
 
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 
-    @media (max-width: 992px) {
-        grid-template-columns: 1fr;
-    }
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 35px;
-    // padding: 30px;
-    padding: clamp(1.25rem, 1.028rem + 0.91vw, 1.875rem);
-    border-radius: 40px;
-    background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  // padding: 30px;
+  padding: clamp(1.25rem, 1.028rem + 0.91vw, 1.875rem);
+  border-radius: 40px;
+  background-color: #fff;
 
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-    }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 
-    img {
-        width: 100%;
-        border-radius: 30px;
-        height: 100%;
-
-        aspect-ratio: 1 / 1;
-        object-fit: cover;
-    }
+  img {
+    width: 100%;
+    border-radius: 30px;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: fill;
+  }
 }
 
 .box {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 
-    h3 {
-        font-size: 20px;
-        font-weight: 500;
-        line-height: 1.1;
-    }
+  h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.1;
+  }
 
-    p {
-        font-size: 15px;
-        color: #5c5c5c;
-        line-height: 1.5;
-    }
+  p {
+    font-size: 15px;
+    color: #5c5c5c;
+    line-height: 1.5;
+  }
 }
 
 .box_bottom {
-    margin-top: auto;
+  margin-top: auto;
 
-    padding-top: 20px;
-    display: flex;
+  padding-top: 20px;
+  display: flex;
 
-    align-items: center;
-    gap: 20px;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-    b {
-        font-weight: 600;
-        font-size: 20px;
-        white-space: nowrap;
+  b {
+    font-weight: 600;
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    background-color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s, background-color 0.3s;
+    &:hover {
+      background-color: #fff;
+      color: var(--accent-color);
     }
-
-    button {
-        padding: 15px 30px;
-        border-radius: 30px;
-        background-color: var(--accent-color);
-        border: 1px solid var(--accent-color);
-        cursor: pointer;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 500;
-        transition:
-            color 0.3s,
-            background-color 0.3s;
-        &:hover {
-            background-color: #fff;
-            color: var(--accent-color);
-        }
-    }
+  }
 }

@@ -18,7 +18,7 @@ const Types = () => {
 
                 <div className={s.box_bottom}>
                   <b>{item.price}</b>
-                  <button>Подробнее</button>
+                  {/* <button>Подробнее</button> */}
                 </div>
               </div>
             </div>

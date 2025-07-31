@@ -2,6 +2,7 @@ import s from './CallModal.module.scss';
 import useModalStore from '../../../store/modalStore';
 import clsx from 'clsx';
 import { useEffect } from 'react';
+import toast from 'react-hot-toast';
 
 const CallModal = () => {
   const { closeModal, isModalOpen } = useModalStore();
@@ -54,13 +55,18 @@ const CallModal = () => {
             )
               .then((res) => {
                 if (res.ok) {
-                  console.log('✅ Отправлено!');
+                  closeModal();
+                  toast.success('Заявка отправлена!');
                   form.reset();
                 } else {
+                  toast.error('Что то пошло не так. Попробуйте позже!');
                   console.error('❌ Telegram error');
                 }
               })
-              .catch((err) => console.error('❌ Ошибка запроса:', err));
+              .catch((err) => {
+                toast.error('Что то пошло не так. Попробуйте позже!');
+                console.error('❌ Ошибка запроса:', err);
+              });
           }}
         >
           <input type="text" placeholder="Ваше имя" required />
