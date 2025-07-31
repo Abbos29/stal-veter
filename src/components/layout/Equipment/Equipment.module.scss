@@ -1,0 +1,268 @@
+.equipment {
+  padding: 60px 0;
+  background-color: white;
+}
+
+.wrapper {
+  h5 {
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0px;
+  }
+
+  position: relative;
+}
+.title {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .nav {
+    display: flex;
+  }
+  @media (max-width: 998px) {
+    .nav {
+      display: none;
+    }
+  }
+}
+.card {
+  background: #fafafa;
+  border-radius: 40px;
+  text-align: left;
+  padding: 30px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+
+  img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-bottom: 26px;
+  }
+
+  h6 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 18px;
+  }
+
+  p {
+    font-size: 15px;
+    color: #5c5c5c;
+    line-height: 1.4;
+  }
+}
+.nav {
+  display: none;
+  align-items: center;
+  gap: 15px;
+  @media (max-width: 998px) {
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.prev,
+.next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--accent-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  color: var(--accent-color);
+  transition:
+    opacity 0.2s,
+    scale 0.2s;
+  &:hover {
+    scale: 1.01;
+  }
+}
+
+.prev {
+  right: 40px;
+}
+
+.next {
+  right: 10px;
+}
+.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: default;
+}
+.info {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 42px;
+
+  @media (max-width: 998px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.info_text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 156%;
+  color: #231f20;
+  gap: 20px;
+  @media (max-width: 998px) {
+    width: 100%;
+
+    text-align: left;
+  }
+}
+.info_form {
+  position: relative;
+  width: 50%;
+  background: #014a2c;
+  padding: 42px 70px;
+  border-radius: 40px;
+  height: max-content;
+  &::after {
+    content: "";
+    position: absolute;
+    top: -35px;
+    left: 0%;
+    background-image: url("/img/gear.svg");
+    background-size: 132px 132px;
+    min-width: 132px;
+    min-height: 132px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 20%;
+    right: -10px;
+    transform: rotate(90deg);
+    background-image: url("/img/gear.svg");
+    background-size: 132px 132px;
+    min-width: 132px;
+    min-height: 132px;
+  }
+  h6 {
+    color: white;
+    margin-bottom: 26px;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  p {
+    margin-bottom: 41px;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 41px;
+  }
+  @media (max-width: 998px) {
+    padding: 40px 30px;
+    width: auto;
+  }
+}
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 20px;
+  // justify-items: center;
+  align-items: center;
+  input,
+  button {
+    height: 51px;
+  }
+
+  // Подпись под формой
+  p {
+    font-weight: 400;
+    text-align: left;
+    font-size: 12px;
+    line-height: 167%;
+    margin: 0;
+  }
+  p a {
+    color: white;
+  }
+  @media (max-width: 998px) {
+    grid-template-columns: 1fr;
+
+    .btn,
+    p {
+      grid-column: span 1;
+      text-align: left;
+    }
+  }
+}
+
+.input {
+  // flex: 1;
+
+  // min-width: 236px;
+  // max-width: 236px;
+
+  padding: 5px 27px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  border-radius: 50px;
+  color: white;
+
+  &::placeholder {
+    color: white;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  @media (max-width: 998px) {
+  }
+  @media (max-width: 768px) {
+    flex: 0;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.btn {
+  flex: 1;
+  // min-width: 236px;
+  // max-width: 296px;
+
+  padding: 16px 56px;
+  background-color: white;
+  color: var(--accent-color, #007f4f);
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  border: 1px solid white;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+  @media (max-width: 998px) {
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    min-width: 100%;
+    max-width: auto;
+  }
+}

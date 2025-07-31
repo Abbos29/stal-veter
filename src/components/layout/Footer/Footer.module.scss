@@ -1,0 +1,125 @@
+.footer {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 40px 0 20px;
+  .top_item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    align-items: flex-start;
+    @media (max-width: 480px) {
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+  }
+  .top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    row-gap: 60px;
+  }
+  .logo {
+    display: flex;
+    align-items: flex-start;
+
+    img {
+      // width: 40px;
+      height: 60px;
+      object-fit: contain;
+      @media (max-width: 480px) {
+        height: 45px;
+      }
+    }
+  }
+
+  .address,
+  .phone,
+  .email {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .address {
+    font-size: 13px;
+  }
+
+  .phone,
+  .email {
+    color: white;
+    text-decoration: none;
+  }
+
+  .social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    span {
+      font-size: 13px;
+    }
+    .socs {
+      display: flex;
+      gap: 10px;
+      // margin-left: auto;
+    }
+  }
+
+  .btn {
+    min-width: 190px;
+    padding: 16px 25px;
+    font-size: 14px;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 999px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
+
+  .bottom {
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+
+    a {
+      color: white;
+      text-decoration: none;
+      opacity: 0.8;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    @media (max-width: 480px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .top {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .bottom {
+      // flex-direction: column;
+      align-items: flex-start;
+      justify-content: baseline;
+      gap: 2px;
+    }
+  }
+}
