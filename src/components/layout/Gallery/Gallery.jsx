@@ -66,7 +66,7 @@ function Gallery() {
               <p>Компания "Стальной ветер" была основана в 2019 году.</p>
             </div>
           </div>
-
+          <h6>Основные составляющие элементы конструкции</h6>
           <div className={s.slider}>
             <div className={s.slider_container} ref={containerRef}>
               {data.map((link, index) => (
@@ -75,17 +75,6 @@ function Gallery() {
                 </>
               ))}
             </div>
-
-            {/* Ползунок */}
-            {/* <input
-              type="range"
-              className={s.slider_range}
-              min="0"
-              max="100"
-              value={scrollValue}
-              step="0.1"
-              onChange={handleRangeChange}
-            /> */}
           </div>
           <div className={s.make_order}>
             <div className={s.info}>
@@ -134,11 +123,7 @@ function Gallery() {
                     });
                 }}
               >
-                <input
-                  type="text"
-                  placeholder="Ваше имя"
-                  className={s.input}
-                />
+                <input type="text" placeholder="Ваше имя" className={s.input} />
                 <input
                   type="tel"
                   placeholder="Ваш телефон*"

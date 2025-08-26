@@ -2,6 +2,7 @@ import React from 'react';
 import s from './Footer.module.scss';
 import Container from '../../ui/Container/Container';
 import useModalStore from '../../../store/modalStore';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   const { openModal } = useModalStore();
@@ -10,12 +11,12 @@ function Footer() {
     <footer className={s.footer}>
       <Container>
         <div className={s.top}>
-          <a href="#" className={s.logo}>
+          <Link to="/" className={s.logo}>
             <img src="/img/logo-footer.svg" alt="logo" />
-          </a>
+          </Link>
           <div className={s.top_item}>
             <p className={s.address}>
-              г. Липецк, Поперечный проезд, <br /> д. 25, стр. 39
+              г. Липецк, Поперечный проезд, <br /> стр. 39
             </p>
 
             <a href="tel:+79995301639" className={s.phone}>
@@ -45,7 +46,7 @@ function Footer() {
         </div>
         <div className={s.bottom}>
           <p>© Стальной ветер 2025</p>
-          <a href="/privacy-policy">Политика конфиденциальности</a>
+          <Link to="/privacy-policy">Политика конфиденциальности</Link>
         </div>
       </Container>
     </footer>

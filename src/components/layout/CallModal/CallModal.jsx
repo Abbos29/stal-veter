@@ -69,8 +69,8 @@ const CallModal = () => {
               });
           }}
         >
-          <input type="text" placeholder="Ваше имя" required />
-          <input type="tel" placeholder="Ваш телефон" required />
+          <input type="text" placeholder="Ваше имя" />
+          <input type="tel" placeholder="Ваш телефон*" required />
           <button type="submit">Оставить заявку</button>
           <p className={s.policy}>
             Отправляя заявку, я соглашаюсь с условиями{' '}

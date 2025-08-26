@@ -5,10 +5,12 @@ import './reset.css';
 import './App.css';
 import { Toaster } from 'react-hot-toast';
 import NotFound from './pages/NotFound/NotFound';
+import ScrollToTop from './components/ui/ScrollToTop/ScrollToTop';
 const App = () => {
   return (
     <Router>
       <Toaster position="right-top" />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />

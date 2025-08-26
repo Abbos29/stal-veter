@@ -29,24 +29,32 @@
 .card {
   background: #fafafa;
   border-radius: 40px;
-  text-align: left;
+  text-align: center;
   padding: 30px;
-  min-height: 400px;
+  // height: 300px;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  height: 100%;
-
+  // height: 100%;
+  .imgWrapper {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
   img {
     width: 100%;
-    max-height: 200px;
-    object-fit: cover;
+    // height: 100%;
+    aspect-ratio: 2/1;
+    object-fit: fill;
     border-radius: 30px;
     margin-bottom: 26px;
   }
 
   h6 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     margin-bottom: 18px;
   }
@@ -80,9 +88,7 @@
   font-size: 20px;
   cursor: pointer;
   color: var(--accent-color);
-  transition:
-    opacity 0.2s,
-    scale 0.2s;
+  transition: opacity 0.2s, scale 0.2s;
   &:hover {
     scale: 1.01;
   }
@@ -135,22 +141,22 @@
   border-radius: 40px;
   height: max-content;
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: -35px;
     left: 0%;
-    background-image: url("/img/gear.svg");
+    background-image: url('/img/gear.svg');
     background-size: 132px 132px;
     min-width: 132px;
     min-height: 132px;
   }
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 20%;
     right: -10px;
     transform: rotate(90deg);
-    background-image: url("/img/gear.svg");
+    background-image: url('/img/gear.svg');
     background-size: 132px 132px;
     min-width: 132px;
     min-height: 132px;
@@ -249,9 +255,7 @@
   cursor: pointer;
   border: 1px solid white;
 
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover {
     background-color: transparent;
