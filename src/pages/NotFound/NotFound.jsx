@@ -3,9 +3,13 @@ import Header from '../../components/layout/Header/Header';
 import s from './NotFound.module.scss';
 import { Link } from 'react-router-dom';
 
+
+import Head from '../../components/ui/Head';
+
 export default function NotFound() {
   return (
     <>
+      <Head title="404 - Страница не найдена" description="Страница не найдена на сайте Стальной ветер" />
       <Header />
       <div className={s.wrap}>
         <div className={s.content}>

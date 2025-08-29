@@ -9,9 +9,13 @@ import Contacts from '../../components/layout/Contacts/Contacts';
 import Footer from '../../components/layout/Footer/Footer';
 import CallModal from '../../components/layout/CallModal/CallModal';
 
+
+import Head from '../../components/ui/Head';
+
 const Home = () => {
   return (
     <>
+      <Head titlee='Складной V-образный скребок для ферм (комби-скрепер). Купить по отличной цене' />
       <CallModal />
       <Header />
       <Hero />

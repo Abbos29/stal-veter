@@ -2,10 +2,13 @@ import s from './Policy.module.scss';
 import Container from '../../components/ui/Container/Container';
 import Header from '../../components/layout/Header/Header';
 import Footer from '../../components/layout/Footer/Footer';
+import Head from '../../components/ui/Head';
 
 const PrivacyPolicy = () => {
   return (
     <>
+      <Head titlee="Политика конфиденциальности" description="Политика конфиденциальности на сайте Стальной ветер" />
+
       <Header />
       <section className={s.privacy}>
         <Container>
