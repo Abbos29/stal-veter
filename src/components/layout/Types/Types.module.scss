@@ -56,7 +56,7 @@
 
   align-items: center;
   gap: 20px;
-  justify-content: space-between;
+  // justify-content: space-between;
   flex-wrap: wrap;
 
   b {
@@ -74,10 +74,18 @@
     color: #fff;
     font-size: 16px;
     font-weight: 500;
-    transition: color 0.3s, background-color 0.3s;
+    transition:
+      color 0.3s,
+      background-color 0.3s;
     &:hover {
       background-color: #fff;
       color: var(--accent-color);
     }
+  }
+
+  .oldPrice {
+    font-size: 0.9rem;
+    color: #888;
+    text-decoration: line-through;
   }
 }
