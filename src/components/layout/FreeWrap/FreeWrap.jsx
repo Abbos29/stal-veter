@@ -27,7 +27,7 @@ const FreeWrap = () => {
 
   return (
     <>
-      <section className={s.freeWrap}>
+      <section className={s.freeWrap} data-reveal>
         <Container>
           <div className={s.wrapper}>
             <img className={s.image} src="/img/free-img.png" alt="img" />
@@ -59,8 +59,8 @@ const FreeWrap = () => {
               </div>
             </div>
             <div className={s.btns}>
-              <button>Получить консультацию</button>
-              <button>Заказать звонок</button>
+              <button onClick={openModal}>Получить консультацию</button>
+              <button onClick={openModal}>Заказать звонок</button>
             </div>
           </div>
         </Container>

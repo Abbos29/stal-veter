@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
   return (
     <>
       <Header />
-      <section className={s.privacy}>
+      <section className={s.privacy} data-reveal>
         <Container>
           <h1 className={s.title}>Политика конфиденциальности</h1>
 

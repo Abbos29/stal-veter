@@ -37,7 +37,7 @@ function Gallery() {
   };
 
   return (
-    <section className={s.gallery}>
+    <section className={s.gallery} data-reveal>
       <Container>
         <div className={s.wrapper}>
           {/* <h5>Галерея</h5> */}

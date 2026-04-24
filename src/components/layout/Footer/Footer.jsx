@@ -8,7 +8,7 @@ function Footer() {
   const { openModal } = useModalStore();
 
   return (
-    <footer className={s.footer}>
+    <footer className={s.footer} data-reveal>
       <Container>
         <div className={s.top}>
           <Link to="/" className={s.logo}>
@@ -28,13 +28,13 @@ function Footer() {
             <div className={s.social}>
               <span>Мы в соц. сетях</span>
               <div className={s.socs}>
-                <a href="#">
+                <a href="https://t.me" target="_blank" rel="noreferrer">
                   <img src="/img/icon-tg.svg" alt="icon" />
                 </a>
-                <a href="#">
+                <a href="https://vk.com" target="_blank" rel="noreferrer">
                   <img src="/img/icon-vk.svg" alt="icon" />
                 </a>
-                <a href="#">
+                <a href="https://instagram.com" target="_blank" rel="noreferrer">
                   <img src="/img/icon-insta.svg" alt="icon" />
                 </a>
               </div>
