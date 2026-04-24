@@ -6,7 +6,7 @@ const Hero = () => {
   const { openModal } = useModalStore();
   return (
     <>
-      <section className={s.hero}>
+      <section className={s.hero} data-reveal>
         <Container>
           <div className={s.wrapper}>
             <div className={s.box}>

@@ -6,7 +6,7 @@ const Header = () => {
   const { openModal } = useModalStore();
   return (
     <>
-      <header className={s.header} id="header">
+      <header className={s.header} id="header" data-reveal>
         <Container>
           <nav className={s.nav}>
             <div className={s.top}>
@@ -15,13 +15,13 @@ const Header = () => {
               </a>
 
               <div className={s.socs}>
-                <a href="#">
+                <a href="https://t.me" target="_blank" rel="noreferrer">
                   <img src="/img/icon-tg.svg" alt="icon" />
                 </a>
-                <a href="#">
+                <a href="https://vk.com" target="_blank" rel="noreferrer">
                   <img src="/img/icon-vk.svg" alt="icon" />
                 </a>
-                <a href="#">
+                <a href="https://instagram.com" target="_blank" rel="noreferrer">
                   <img src="/img/icon-insta.svg" alt="icon" />
                 </a>
               </div>

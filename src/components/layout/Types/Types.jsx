@@ -3,7 +3,7 @@ import { data } from './data';
 import s from './Types.module.scss';
 const Types = () => {
   return (
-    <section className={s.types}>
+    <section className={s.types} data-reveal>
       <Container>
         <h5>Типы оборудования</h5>
 

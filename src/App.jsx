@@ -6,10 +6,12 @@ import './App.css';
 import { Toaster } from 'react-hot-toast';
 import NotFound from './pages/NotFound/NotFound';
 import ScrollToTop from './components/ui/ScrollToTop/ScrollToTop';
+import SmoothScroll from './components/ui/SmoothScroll/SmoothScroll';
 const App = () => {
   return (
     <Router>
       <Toaster position="right-top" />
+      <SmoothScroll />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />

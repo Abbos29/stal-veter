@@ -15,7 +15,7 @@ function Equipment() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className={s.equipment} id="equipment">
+    <section className={s.equipment} id="equipment" data-reveal>
       <Head
         title={data[activeIndex]?.title || 'Запасные части для скреперного оборудования'}
         description="Запасные части для скреперного оборудования"

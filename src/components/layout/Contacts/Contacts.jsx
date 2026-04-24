@@ -5,7 +5,7 @@ import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 
 function Contacts() {
   return (
-    <section className={s.contacts}>
+    <section className={s.contacts} id="contacts" data-reveal>
       <Container>
         <h5>Контакты</h5>
         <div className={s.contacts_list}>
